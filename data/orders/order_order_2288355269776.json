@@ -1,0 +1,19 @@
+{
+    "pizzas": [
+        {
+            "description": "Medium Pepperoni Pizza",
+            "cost": 10.0
+        },
+        {
+            "description": "Medium Pepperoni Pizza",
+            "cost": 10.0
+        },
+        {
+            "description": "Medium Custom Pizza with Cheese with Chicken",
+            "cost": 5.0
+        }
+    ],
+    "total_price": 25.0,
+    "payment_status": false,
+    "status": "Updated"
+}

@@ -1,12 +1,12 @@
 class AdminMenu:
-    @staticmethod
-    def display_menu():
-        print("\nAdmin menu:")
+    def authenticate(self):
+        print("\n--- Admin Login ---")
         username = input("Username: ")
         password = input("Password: ")
         
         if username == "admin" and password == "password":
-            print("SUCCESS!")
-            print("Tabulka prodejů:")
+            print("Login successful!")
+            return True
         else:
-            print("Neplatné údaje.")
+            print("Invalid credentials.")
+            return False

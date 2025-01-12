@@ -1,26 +1,32 @@
 from views.ui import UI
-from views.order_menu import OrderMenu
-from views.payment_menu import PaymentMenu
-from views.admin_menu import AdminMenu
+from controllers.payment_controller import PaymentController
+from controllers.admin_controller import AdminController
+from controllers.order_controller import OrderController
 
-class Main_menu(UI):
-    @staticmethod 
-    def write_out():
-            print("\nHlavní menu:")
-            print("1. Vytvořit objednávku")
-            print("2. Platba")
-            print("3. Admin menu")
-            print("4. Ukončit aplikaci")
+class MainMenu(UI):
+    def __init__(self):
+        self.order_controller = OrderController()
+        self.payment_controller = PaymentController()
+        self.admin_controller = AdminController()
     
-    @staticmethod
-    def handle_choice(choice):
+    def write_out(self):
+        print("\n--- Main Menu ---")
+        print("1. Create Order")
+        print("2. Process Payment")
+        print("3. Admin Menu")
+        print("4. Exit Application")
+
+    def handle_choice(self, choice):
         if choice == "1":
-            OrderMenu.display_menu()
+            self.order_controller.handle_order()
         elif choice == "2":
-            PaymentMenu.display_menu()
+            if self.payment_controller.handle_payment(self.order_controller.current_order):
+                # Create a new order after successful payment
+                self.order_controller.current_order = None
         elif choice == "3":
-            AdminMenu.display_menu()
+            self.admin_controller.handle_admin_tasks()
         elif choice == "4":
+            print("Thank you for using our Pizza Order Application!")
             exit()
         else:
-            print("Neplatná možnost!")
+            print("Invalid choice. Please try again.")

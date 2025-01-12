@@ -1,0 +1,27 @@
+{
+    "pizzas": [
+        {
+            "description": "Medium Pepperoni Pizza",
+            "cost": 10.0
+        },
+        {
+            "description": "Medium Pepperoni Pizza",
+            "cost": 10.0
+        },
+        {
+            "description": "Large Chilli Pizza",
+            "cost": 12.0
+        },
+        {
+            "description": "Large Chilli Pizza",
+            "cost": 12.0
+        },
+        {
+            "description": "Large Chilli Pizza",
+            "cost": 12.0
+        }
+    ],
+    "total_price": 56.0,
+    "payment_status": true,
+    "status": "Updated"
+}
