@@ -1,7 +1,5 @@
 # Pizza Ordering Application
 
-This project is a pizza ordering application that follows object-oriented programming (OOP) principles, implements the MVC architecture, and utilizes various design patterns.
-
 ---
 
 > **This project is created as part of the "Architectures and Patterns" lecture**  
