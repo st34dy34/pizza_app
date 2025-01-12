@@ -1,0 +1,15 @@
+{
+    "pizzas": [
+        {
+            "description": "Large Chilli Pizza",
+            "cost": 12.0
+        },
+        {
+            "description": "Large Chilli Pizza",
+            "cost": 12.0
+        }
+    ],
+    "total_price": 24.0,
+    "payment_status": false,
+    "status": "Updated"
+}
